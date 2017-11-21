@@ -1,13 +1,15 @@
 package com.deepshikha.video;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.VideoView;
 
 public class Activity_galleryview extends Activity {
 
     String str_video;
-    VideoView vv_video;
+    ImageView vv_video;
 
 
     @Override
@@ -19,11 +21,9 @@ public class Activity_galleryview extends Activity {
 
     private void init() {
 
-        vv_video = (VideoView) findViewById(R.id.vv_video);
-
+        vv_video = (ImageView) findViewById(R.id.vv_video);
         str_video = getIntent().getStringExtra("video");
-        vv_video.setVideoPath(str_video);
-        vv_video.start();
+        vv_video.setImageURI(Uri.parse(str_video));
 
     }
 
