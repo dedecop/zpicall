@@ -35,7 +35,7 @@ public class VideoFolder extends AppCompatActivity {
     private void init(){
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view1);
-        recyclerViewLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        recyclerViewLayoutManager = new GridLayoutManager(getApplicationContext(), 4);
         recyclerView.setLayoutManager(recyclerViewLayoutManager);
 
         fn_checkpermission();
